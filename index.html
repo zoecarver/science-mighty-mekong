@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <ul class="pages">
+      <li class="page1">
+        <h1>How many <b>different</b> types of creature swim in the waters of the mighty Mekong?</h1>
+        <div class="choices">
+          <button class ='btn btn-primary button1'>10</button>
+          <button class ='btn btn-danger button1'>37</button>
+          <button class ='btn btn-dark button1'>100</button>
+          <button class ='btn btn-light win1'>1000</button>
+        <div>
+        <div>
+          <br>
+          <h2>Leaders</h2>
+          <p class='leaders'></p>
+        </div>
+      </li>
+      <li class="page2">
+        <h1>How much of the worlds fish are cuaght here?</h1>
+        <div class="choices">
+          <button class ='btn btn-primary button2'>10%</button>
+          <button class ='btn btn-danger button2'>Half</button>
+          <button class ='btn btn-dark button2'>75%</button>
+          <button class ='btn btn-light win2'>1/4</button>
+        <div>
+        <div>
+          <br>
+          <h2>Leaders</h2>
+          <p class='leaders'></p>
+        </div>
+      </li>
+      <li class="page3">
+        <h1>How many people live in the Mekong river basin?</h1>
+        <div class="choices">
+          <button class ='btn btn-primary button3'><1 M</button>
+          <button class ='btn btn-danger win3'>70 M</button>
+          <button class ='btn btn-dark button3'>200 M</button>
+          <button class ='btn btn-light button3'>37 M</button>
+          <br>
+          <h3>NOTE</h3>
+          <p>These people rely on the river for drinking water, food, irrigation, hydropower, transportation and commerce.</p>
+        <div>
+        <div>
+          <br>
+          <h2>Leaders</h2>
+          <p class='leaders'></p>
+        </div>
+      </li>
+      <li class="page4">
+        <img src="/static/dams.gif" class='dams' />
+        <div class="oc">
+        </div>
+        <h1>"The biggest environmental talking point on the Mekong at the moment is the building of huge dams – which, it’s estimated, could reduce the river’s fish stocks by more than 40%. Not to mention the damage they could do to other river wildlife."</h1>
+        <button class="btn button4">Next</button>
+      </li>
+      <li class="page5">
+        <h1>They have giant freshwater stingray that can weigh up to...</h1>
+        <div class="choices">
+          <button class ='btn btn-primary button5'>200kg</button>
+          <button class ='btn btn-danger button5'>A metric Ton</button>
+          <button class ='btn btn-dark win5'>600kg</button>
+          <button class ='btn btn-light button5'>50kg</button>
+        <div>
+        <div>
+          <br>
+          <h2>Leaders</h2>
+          <p class='leaders'></p>
+        </div>
+      </li>
+      <li class="page6">
+        <h1>What is one of the biggest enviormental talking points?</h1>
+        <div class="choices">
+          <button class ='btn btn-primary button6'>Deforistation</button>
+          <button class ='btn btn-danger win6'>Dams</button>
+          <button class ='btn btn-dark button6'>The Coal industry</button>
+          <button class ='btn btn-light button6'>Wildlife Preservation</button>
+        <div>
+        <div>
+          <br>
+          <h2>Leaders</h2>
+          <p class='leaders'></p>
+        </div>
+      </li>
+      <li class="over">
+        <img src="/static/map_icon.png" class="map_icon"/>
+        <img src="/static/giphy-downsized-large.gif" class="imgBG" />
+        <h1>Nice Job! Thats it...</h1>
+        <div class="choices">
+          <h2>There also are lots of wildlife:</h2>
+          <h4>Asian Rhinos, Asian Elephants, Tigers, Porpoises, Giant Catfish, Freshwater Stingrays</h4>
+          <br>
+          <br>
+          <h2>Leaders</h2>
+          <p class='leaders'></p>
+          <p class="hint">Hint: hover over and off of the map icon!</p>
+        </div>
+      </li>
+      <li class="login page">
+        <img src="/static/giphy-downsized-large.gif" class="imgBG" />
+        <div class="form">
+          <h3 class="title">What's your nickname?</h3>
+          <input class="usernameInput" type="text" maxlength="14" />
+        </div>
+      </li>
+    </ul>
+  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="/static/main.js"></script>
+</html>
