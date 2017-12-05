@@ -15,7 +15,7 @@ $(function() {
 
   var $loginPage = $('.login.page'); // The login page
   var $chatPage = $('.chat.page'); // The chatroom page
-  
+
   var $page1 = $('.page1');
   var $page2 = $('.page2');
   var $page3 = $('.page3');
@@ -30,6 +30,8 @@ $(function() {
   $page5.hide();
   $page6.hide();
   $over.hide();
+
+  const sort = (a, b) => (b.points - a.points);
 
   // Prompt for setting a username
   var username;
@@ -222,7 +224,7 @@ $(function() {
     console.log('keydown');
     $('.imgBG').hide();
   })
-  
+
   $window.keydown(function (event) {
     // Auto-focus the current input when a key is typed
     if (!(event.ctrlKey || event.metaKey || event.altKey)) {
@@ -255,7 +257,7 @@ $(function() {
   $inputMessage.click(function () {
     $inputMessage.focus();
   });
-  
+
   var socket = io();
   $('.button1').click(function(){
     socket.emit('chat message', JSON.stringify({
@@ -387,11 +389,12 @@ $(function() {
     $('#messages').append($('<li>').text(msg));
   });
   socket.on('score', (leaders) => {
+    $('.leaders').text("");
+    leaders = leaders.sort(sort);
     console.log(leaders);
     leaders_text = "\n";
     leaders.forEach((leader) => {
-      leaders_text += ("  - " + leader.name + " (" + leader.points + ")")
+      $('.leaders').append("<br>  - " + leader.name + " (score: " + leader.points + ")");
     })
-    $('.leaders').text(leaders_text);
   })
 });
